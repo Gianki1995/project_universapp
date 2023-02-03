@@ -1,0 +1,73 @@
+//COLOR
+$bodyColor: black;
+$primary-color: hsla(243, 87%, 27%, 0.619);
+$secondary-color: hsla(270, 93%, 24%, 0.913);
+$text-color: white;
+$checkbox-color: green;
+
+//Mixin
+@mixin gradient {
+  background-image: linear-gradient(150deg, $primary-color, $secondary-color);
+}
+
+@mixin gradient2 {
+  background:linear-gradient(to bottom, $primary-color 0%, $secondary-color 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+}
+
+@mixin button {
+  height: 60px;
+  width: 150px;
+  background: $secondary-color;
+  color: $text-color;
+  cursor: pointer;
+  &:hover {
+    transform: skew(20deg);
+    transition: all 2s ease-in;
+    background-color: $primary-color;
+    box-shadow: 2px 2px 2px 2px $secondary-color;
+    opacity: 0.5;
+  }
+  &::after {
+    content: "->";
+  }
+}
+
+@mixin button2 {
+  height: 60px;
+  width: 150px;
+  background: $secondary-color;
+  color: $text-color;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary-color;
+    box-shadow: 2px 2px 2px 2px $secondary-color;
+    opacity: 0.5;
+  }
+  &::after {
+    content: "->";
+  }
+}
+
+@mixin h1 {
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+// MEDIA QUERIES
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 376px) {
+    @content;
+  }
+} ;

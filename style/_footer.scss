@@ -1,0 +1,77 @@
+@import "./utilies";
+
+#footer {
+  .box-footer {
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
+    @include tablet {
+      height: 60vh;
+      margin-top: 150px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .box-footer-left {
+      background-color: $primary-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 30px;
+
+      .img-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 55px;
+      }
+      .box-privacy {
+        display: flex;
+        gap: 10px;
+      }
+    }
+
+    .box-footer-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left;
+      padding: 30px;
+      background: $secondary-color;
+
+      .box-made {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 30px;
+        margin-left: 50px;
+        @include tablet {
+          margin-left: 0;
+          padding: 0;
+          justify-content: left;
+          align-items: flex-start;
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          @include tablet {
+            font-size: 15px;
+          }
+        }
+      }
+
+      .img-logo2 {
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        @include tablet {
+          justify-content: left;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}

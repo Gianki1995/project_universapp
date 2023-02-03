@@ -1,0 +1,94 @@
+#route {
+  height: 89vh;
+  .box-route {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    @include tablet {
+      flex-direction: column;
+    }
+    .box-route-info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 18px;
+      h1 {
+        font-size: 37px;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+      }
+      span {
+        color: $secondary-color;
+      }
+      li {
+        letter-spacing: 1px;
+      }
+    }
+    .box-image {
+      img {
+        height: 450px;
+        width: 450px;
+        @include mobile {
+          height: 300px;
+          width: 300px;
+        }
+      }
+    }
+  }
+  .formation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // align-items: center;
+    height: 60vh;
+    @include tablet {
+      height: 80vh;
+      overflow: auto;
+      justify-content: space-between;
+      margin-right: 5px;
+    }
+    .container-formation {
+      @include gradient;
+      height: 56vh;
+      width: 280px;
+      box-shadow: 2px 2px 20px 4px $text-color;
+      margin-left: 6px;
+      margin-right: 5px;
+      gap: 16px;
+      padding: 10px;
+      border-radius: 10%;
+      text-align: left;
+      @include tablet {
+        height: 65vh;
+        margin-top: 30px;
+        margin-left: 19px;
+        padding: 10px;
+      }
+      h3 {
+        margin-bottom: 30px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+      .img-teacher {
+        display: flex;
+        justify-content: left;
+        img {
+          border: 1px solid $text-color;
+          border-radius: 60%;
+          color: $primary-color;
+          padding: 3px;
+          margin-bottom: 4px;
+        }
+        p {
+          margin-top: 10px;
+          padding: 3px;
+        }
+      }
+    }
+  }
+}

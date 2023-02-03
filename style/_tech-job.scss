@@ -1,0 +1,131 @@
+@import "./_utilies.scss";
+
+.h1-it {
+  @include h1;
+}
+#tech-job {
+  box-shadow: 2px 2px 20px 4px $text-color;
+  @include gradient;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  width: 1250px;
+  margin-left: 45px;
+  @include tablet {
+    width: 350px;
+    height: 270vh;
+    margin-top: 220px;
+    margin-right: 30px;
+
+   
+  }
+  @include mobile {
+    width: 300px;
+    height: 290vh;
+    padding: 50px;
+    margin-left: 10px;
+  }
+  .container-job {
+    height: 60vh;
+    margin-top: 50px;
+    display: flex;
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin-top: 100px;
+      height: 80vh;
+      
+    }
+
+    .box-over-1 {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      justify-content: space-around;
+      padding: 2rem 7rem;
+      height: 50vh;
+      width: 680px;
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        height: 40vh;
+        width: 350px;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+      }
+
+      .in-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+        @include tablet {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+        }
+        h2 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  .container-job-2 {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include tablet {
+      flex-direction: column;
+      margin-top: 300px;
+    }
+    .box-under-1 {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      justify-content: space-around;
+      padding: 2rem 7rem;
+      height: 50vh;
+      width: 680px;
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      .in-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+        @include tablet {
+          align-items: center;
+          justify-content: center;
+        }
+
+        img {
+          @include tablet {
+            align-items: center;
+            padding-top: 30px;
+            margin-top: 200px;
+            width: 250px;
+            height: 250px;
+          }
+        }
+        h2 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
